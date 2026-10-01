@@ -1,0 +1,164 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+body{
+    min-height: 100vh;
+    background:blue;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.atm{
+    width:1000px;
+    min-height:650px ;
+    background: rgb(41, 141, 181);
+    border:3px solid #333;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: #174ea6;
+    
+
+}
+.oline{
+    font-weight: bold;
+    font-size: 18px;
+}
+.layout{
+    display: grid;
+    font-size: 18px;
+
+}
+.layout{
+    display: grid;
+    grid-template-columns: 1.6fr .65fr 1fr;
+    gap:25px;
+    align-items: start;
+}
+.screen{
+    min-height: 445px;
+    border:3px solid #333;
+    border-radius:18px;
+    background: lightseagreen;
+    padding: 25px;
+    position: relative;
+}
+.screen h2{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 55px;
+}
+.welcome{
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.8;
+}
+.atm-label{
+    display: inline-block;
+    border: 2px solid #333;
+    padding: 6px 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    background:rgb(203, 47, 151);
+}
+.insert{
+    display: block;
+    margin:45px auto 0;
+    padding: 13px 22px;
+    background: #396a9c;
+    border:2px solid #333;
+    border-radius: 7px;
+    font-size: 16px;
+
+}
+.side-button{
+    position: absolute;
+    top:25px;
+    bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.side-button.left{left: -19px;}
+.side-button.right{right: -19px;}
+.side-buttons button{
+    width:34px;
+    height: 34px;
+    border: 2px solid #333;
+    background: purple;
+    border-radius: 5px;
+}
+.output-box{
+    height: 105px;
+    border:3px solid #333;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: springgreen;
+}
+.output{
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+    padding-top: 18px;
+}
+.keypad{
+    border:2px solid #333;
+    border-radius:15px;
+    padding: 20px;
+    background: yellow;
+}
+.output-box span{
+    border: 2px solid #333;
+    padding: 14px 28px;
+    font-size: 19px;
+}
+.keypad h3{
+    text-align: center;
+    margin-bottom: 18px;
+
+}
+.keys{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 11px;
+
+}
+.keys button{
+    height: 55px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: rgb(203, 47, 151);
+    font-size: 18px;
+
+
+}
+.keys .cancel{background: #fee2e2;}
+.keys .enter{background: #dcfce7;}
+@media (max-width:850px){
+    .atm{width:95%;}
+    .layout{grid-template-columns: 1fr;}
+    .outputs {flex-direction: row;}
+    .output-box{flex:1;}
+
+}
+@media (max-width:550px){
+    .outputs{flex-direction: column;}
+    header{flex-direction: column; gap:10px;}
+}
+h2{
+    color: purple;
+}
